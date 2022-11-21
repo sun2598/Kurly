@@ -1,0 +1,37 @@
+header {
+    /* 1. 가로중앙정렬 */
+    width: 960px; margin: 0 auto; 
+    /* 4. 기준 위치 잡기. 후손요소 3개를 위한 기준 (0,0)~(x,y) */
+    position: relative; height: 160px;
+}
+/* #content  */
+article { 
+    /* 1. 가로중앙정렬 */
+    width: 960px; margin: 0 auto;
+    /* 5. 테두리 - content-box -> border-box 지정해야 960px에서 삐져나오지 않음 */
+    border: 1px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+aside {
+    width: 200px;
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+    z-index: 1;
+    background-color: aliceblue;
+}
+footer {
+    /* 1. 가로중앙정렬 */
+    width: 960px; margin: 0 auto;
+}
+.wrap.header {
+    background-color: antiquewhite;
+}
+.wrap.article.full_width {
+    background-color: bisque;
+}
+.wrap.footer {
+    background-color: burlywood;
+}

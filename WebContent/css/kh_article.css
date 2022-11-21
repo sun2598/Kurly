@@ -1,0 +1,13 @@
+.d_flex {
+    display: flex;
+    justify-content: space-between;
+}
+.d_flex > div {
+    border: 1px solid black;
+    /* 방법1. margin이 적당히 들어감 */
+    width: 22%; 
+}
+.d_flex > div:not(:last-child) {
+    /* 방법2. width가 적당히 들어감 */
+    margin-right: 10px;
+}

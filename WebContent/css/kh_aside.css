@@ -1,0 +1,58 @@
+.buttons {
+    overflow: hidden;
+}
+aside label {
+    /* 9. 탭 메뉴 버튼 */
+    width: 100px; height: 30px;
+    /* 9-1. label은 inline 속성 -> inline-block하면 띄워쓰기 인식함 -> 100px 초과해서 2줄로 나타남 */
+    display: block;
+    float: left;
+    /* 9-2. 색 지정 */
+    background-color: black;
+    color: white;
+    /* 9-3. 글자 위치 : height와 동일하게 line-height */
+    text-align: center;
+    line-height: 30px;
+    /* 9-4. 테두리 */
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+aside input[type="radio"] {
+    /* tab메뉴를 위해 radio 기능만 사용, 화면에는 보여지지 않게 */
+    display: none;
+}
+aside .items .tab_item {
+    /* 10-1. tab메뉴의 items들이 모두 보이지 않게 함 */
+    display: none;
+}
+/* 10-2. radio 눌려진 상태에 따라 items 중 1개를 보여줌 */
+aside input[type="radio"]:nth-of-type(1):checked ~ .items .tab_item:nth-of-type(1) {
+    display: block;
+}
+aside input[type="radio"]:nth-of-type(2):checked ~ .items .tab_item:nth-of-type(2) {
+    display: block;
+}
+/* 10-3. radio 눌려진 상태에 따라 label의 색을 다르게 지정함 */
+aside input[type="radio"]:nth-of-type(1):checked ~ .buttons label:nth-of-type(1) {
+    background-color: white;
+    color: black;
+}
+aside input[type="radio"]:nth-of-type(2):checked ~ .buttons label:nth-of-type(2) {
+    background-color: white;
+    color: black;
+}
+
+.tab_item li {
+    /* 11. 자식에 float 지정된다면 높이 계산을 위해 */
+    overflow: hidden;
+    border: 1px solid black;
+
+    /* 중복테두리 제거 */
+    border-top: 0; 
+}
+.tab_item a > div {
+    /* 11. image를 왼쪽에 배치. 그 옆에 text 있는 div가 배치됨. 
+    width는 image 크기가 45이므로 따로 설정 안함 */
+    float: left;
+}
