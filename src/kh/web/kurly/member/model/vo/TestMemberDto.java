@@ -2,6 +2,11 @@ package kh.web.kurly.member.model.vo;
 
 public class TestMemberDto {
 	
+//	ID     NOT NULL VARCHAR2(100) 
+//	PASSWD          VARCHAR2(100) 
+//	NAME            VARCHAR2(100) 
+//	EMAIL           VARCHAR2(200) 
+
 	// 필드선언
 	private String id;
 	private String passwd;
